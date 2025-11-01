@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Program",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/index.js",
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/mugabo15/Desktop/MTC-Hack",
+      "program": "/Users/mugabo15/Desktop/MTC-Hack/build/Debug/outDebug"
+    }
+  ]
+}

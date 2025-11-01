@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Mugabo",
+  "editor": "Physical Prototype - Arduino IDE",
+  "description": "Schematic for ClimaGuard IoT Node - ESP32-based environmental monitor for telecom infrastructure",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -38.4, "left": -43.16, "attrs": {} },
+    { "type": "dht22", "id": "sensor1", "top": 106.62, "left": 43.2, "attrs": {} },
+    { "type": "mq135", "id": "sensor2", "top": 200, "left": 100, "attrs": {} },
+    { "type": "lcd1602-i2c", "id": "display1", "top": -233.6, "left": 216.8, "attrs": { "pins": "i2c" } },
+    { "type": "buzzer", "id": "alert1", "top": -36, "left": 145.8, "attrs": { "volume": "0.1" } }
+  ],
+  "connections": [
+    ["esp:2", "sensor1:data", "green"],
+    ["esp:4", "sensor2:aout", "green"],
+    ["esp:12", "alert1:1", "green"],
+    ["esp:5V", "sensor1:vcc", "red"],
+    ["esp:5V", "sensor2:vcc", "red"],
+    ["esp:5V", "display1:vcc", "red"],
+    ["esp:GND.2", "sensor1:gnd", "black"],
+    ["esp:GND.2", "sensor2:gnd", "black"],
+    ["esp:GND.3", "display1:gnd", "black"],
+    ["esp:GND.3", "alert1:2", "black"],
+    ["esp:21", "display1:sda", "green"],
+    ["esp:22", "display1:scl", "green"]
+  ],
+  "notes": "Physical wiring for ESP32 prototype. Use jumper wires for assembly. No simulation dependencies."
+}

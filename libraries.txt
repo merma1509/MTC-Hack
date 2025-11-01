@@ -1,0 +1,13 @@
+# ClimaGuard IoT Node - Required Libraries for Arduino IDE
+# Install these via Arduino Library Manager for ESP32 compatibility
+
+# Core libraries for sensors and IoT
+DHT sensor library by Adafruit (for DHT22)
+Adafruit Unified Sensor (dependency for DHT)
+LiquidCrystal I2C by Frank de Brabander (for LCD display)
+ThingSpeak by MathWorks (for IoT cloud integration)
+
+# WiFi and core ESP32 support (included with ESP32 board package)
+# No additional installs needed for Wire.h or WiFi.h
+
+# Version notes: Use latest stable versions for best compatibility
